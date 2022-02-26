@@ -9,6 +9,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+/* Header Style Start */
 header {
     padding: 20px 35px;
     background-color: #39a6b2;
@@ -43,7 +44,34 @@ header nav ul li a{
     font-weight: lighter;
     font-size: 22px;
 }
+/* Header Style End */
+section {
+    padding: 60px;
+}
+/* Hero Style Start */
+.hero {
+    background-image: url("./assests/images/hero-bg.jpg");
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+/* Hero Style End */
 
+/* Form Style Start */
+.hero-form {
+    background-color: #fce138;
+    padding: 20px;
+    color:#024e76;
+    width: 500px;
+    position: absolute;
+    bottom: 120px;
+    right: 140px;
+    border: 3px solid #024e76;
+}
+/* Form Style End */
+
+/* Footer Style Start */
 footer {
     background: #fce138;
      width: 100%;
@@ -66,3 +94,4 @@ footer div {
 footer a{
     color: #024e76
 }
+/* Footer Style End */
