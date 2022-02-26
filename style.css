@@ -107,20 +107,27 @@ margin: 5px 0 15ox 0;
 
 /* Form Style End */
 
+.section-title {
+    font-size: 55px;
+    color: #024e76;
+    margin-bottom: 35px;
+    padding: 0 100px 20px 100px;
+    display: inline-block;
+    border-bottom: 3px solid;
+}
+.primary-border {
+    border-color: #fce138;
+}
+
+.secondary-border {
+    border-color: #39a6b2;
+}
+
 /* What We Do Section Style Start */
 .intro {
     text-align: center;
 }
 
-.intro h2 {
-    display: inline-block;
-    font-size: 55px;
-    color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    border-bottom: 3px solid;
-    border-color: #fce138;
-}
 
 .intro p {
     line-height: 1.7;
@@ -130,6 +137,33 @@ margin: 5px 0 15ox 0;
     margin: 0 auto;
 }
 /* What We Do Section Style End */
+
+/* What You Do Section Style Start */
+.steps {
+    text-align: center;
+    background: #fce138;
+}
+
+.steps span{
+    font-size: 38px;
+}
+
+.steps div{
+    margin-bottom: 80px;
+}
+
+.steps h3{
+    color: #024e76;
+    font-size: 46px;
+    margin-top: 10px;
+}
+
+.steps p{
+    color:#39a6b2;
+    font-size: 23px;
+}
+/* What You Do Section Style End */
+
 
 /* Footer Style Start */
 footer {
