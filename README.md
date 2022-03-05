@@ -12,3 +12,5 @@ https://lernantino.github.io/run-buddy/
 
 ## Contribution 
 Made with ❤️ Liz DiTullio
+
+### ©️2019 Run Buddy, Inc 
