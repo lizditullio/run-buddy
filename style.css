@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2; 
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -10,10 +16,10 @@ body {
 }
 
 .page-title {
-    color:#fce138;
+    color:var( --primary-color);
     display: inline-block;
     border-bottom: 4px solid;
-    border-bottom-color: #fce138;
+    border-bottom-color: var( --primary-color);
     padding: 0 80px 15px 80px;
     font-weight: normal;
     font-size: 42px;
@@ -34,19 +40,20 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 9999;
 }
 
 header h1 {
    font-weight: bold; 
    font-size: 36px;
-   color: #fce138;
+   color: var( --primary-color);
    margin: 0;
    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
     text-decoration: none;
-    color: #fce138
+    color: var( --primary-color);
 }
 
 header nav {
@@ -70,8 +77,8 @@ header nav ul li a{
 
 
 header nav ul li a:hover {
-    background: #fce138;
-    color: #024e76;
+    background: var( --primary-color);
+    color: var(--secondary-color);
     border-radius: 15px;
     text-shadow: none;
 }
@@ -107,7 +114,7 @@ section {
 .hero-cta h2 {
     font-style: italic;
     font-size: 55px;
-    color: #fce138;
+    color: var( --primary-color);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 /* Hero Style End */
@@ -118,8 +125,8 @@ section {
     padding: 20px;
     width: 40%;
     margin: 3.5%;
-    color:#024e76;
-    border: 3px solid #024e76;
+    color:var(--secondary-color);
+    border: 3px solid var(--secondary-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
 }
@@ -134,11 +141,11 @@ margin: 5px 0 15ox 0;
 }
 
 .form-input {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     border-radius: 15px;
@@ -155,8 +162,8 @@ margin: 5px 0 15ox 0;
 }
 
 .hero-form button {
-    color: #fce138;
-    background-color: #024e76;
+    color: var( --primary-color);
+    background-color: var(--secondary-color);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -164,14 +171,14 @@ margin: 5px 0 15ox 0;
 }
 
 .hero-form button:hover {
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
 }
 
 /* Form Style End */
 
 .section-title {
     font-size: 48px;
-    color: #024e76;
+    color: var(--secondary-color);
     border-bottom: 3px solid;
     padding-bottom: 20px;
     text-align: center;
@@ -179,7 +186,7 @@ margin: 5px 0 15ox 0;
     width: 50%;
 }
 .primary-border {
-    border-color: #fce138;
+    border-color: var( --primary-color);
 }
 
 .secondary-border {
@@ -195,7 +202,7 @@ margin: 5px 0 15ox 0;
 .intro p {
     text-align: center;
     line-height: 1.7;
-    color: #39a6b2;
+    color: var(--tertiary-color);
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
@@ -204,7 +211,7 @@ margin: 5px 0 15ox 0;
 
 /* What You Do Section Style Start */
 .steps {
-    background: #fce138;
+    background: var( --primary-color);
 }
 
 .step {
@@ -218,11 +225,11 @@ margin: 5px 0 15ox 0;
 }
 
 .step:not(:last-child) {
-    border-bottom: 1px solid #39a6b2;
+    border-bottom: 1px solid var(--tertiary-color);
 }
 
 .step h3{
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 46px;
     flex: 1 30%;
 }
@@ -248,14 +255,74 @@ margin: 5px 0 15ox 0;
 }
 
 .step-text p{
-    color:#39a6b2;
+    color:var(--tertiary-color);
     font-size: 18px;
 }
 
 .step-text h4{
     font-size: 26px;
     line-height: 1.5;
-    color: #024e76;
+    color: var(--secondary-color);
+}
+
+.checkbox-wrapper input, .radio-wrapper input {
+    opacity: 0;
+}
+
+.checkbox-wrapper label, .radio-wrapper label {
+    position: relative;
+    left: 10px;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: rgba(225, 225, 225, 0.75);
+    border: 1px solid var(--secondary-color);
+    position: absolute;
+    top: -4px;
+    left: -30px;
+}
+
+.radio-wrapper label::before {
+    border-radius: 50%;
+}
+
+.radio-wrapper label::after { 
+    content: "";
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%; 
+    background: var(--secondary-color);
+    position: absolute;
+    left: -29px;
+    top: -3px;
+    background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+}
+
+.checkbox-wrapper label::after {
+    content: "";
+    height: 6px;
+    width: 14px; 
+    border-left: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    position: absolute;
+    left: -26px;
+    top: 1px; 
+    transform: rotate(-58deg);
+}
+
+.checkbox-wrapper input + label:after, 
+.radio-wrapper input + label:after {
+    content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
+    content: "";
 }
 /* What You Do Section Style End */
 
@@ -270,8 +337,8 @@ margin: 5px 0 15ox 0;
 }
 .trainer {
     margin: 20px;
-    background: #024e76;
-    color: #fce138;
+    background-color: var(--secondary-color);
+    color: var( --primary-color);
     flex: 1;
 }
 
@@ -301,11 +368,11 @@ margin: 5px 0 15ox 0;
 
 /* Reach Out Section Style Start */
 .contact {
-    background-color: #024e76;
+    background-color: var(--secondary-color);
 }
 
 .contact h2{
-    color: #fce138;
+    color: var(--primary-color);
 }
 
 .contact-info iframe {
@@ -317,7 +384,7 @@ margin: 5px 0 15ox 0;
 }
 
 .contact-info h3 {
-    color: #fce138;
+    color: var( --primary-color);
     font-size: 32px;
 }
 .contact-info p, 
@@ -329,7 +396,7 @@ margin: 5px 0 15ox 0;
 }
 
 .contact-info a {
-    color: #fce138;
+    color: var( --primary-color);
 }
 
 .contact-info {
@@ -345,11 +412,11 @@ margin: 5px 0 15ox 0;
 
 .contact-form input,
 .contact-form textarea {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -365,8 +432,8 @@ margin: 5px 0 15ox 0;
 .contact-form button{
     width: 100%;
     border: none;
-    background: #fce138;
-    color: #024e76;
+    background-color: var( --primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
@@ -374,14 +441,14 @@ margin: 5px 0 15ox 0;
 }
 
 .contact-form button:hover {
-    color: #fce138;
-    background: #39a6b2;
+    color: var( --primary-color);
+    background-color: var(--tertiary-color);
 }
 /* Reach Out Section Style End */
 
 /* Footer Style Start */
 footer {
-    background: #fce138;
+    background-color: var( --primary-color);
      width: 100%;
      padding: 40px 35px;
      display: flex;
@@ -390,7 +457,7 @@ footer {
 }
 
 footer h2 {
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 30px;
     margin: 0;
 }
@@ -401,7 +468,7 @@ footer div {
 }
 
 footer a{
-    color: #024e76
+    color: var(--secondary-color);
 }
 /* Footer Style End */
 
